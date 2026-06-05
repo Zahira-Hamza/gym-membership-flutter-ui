@@ -1,0 +1,8 @@
+class AppAssets {
+  static const String heroImageHome =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCJgI7F1QJcId0x_BKIP4cY1g2-IuJPqli_eNJY8X4EY2peCjykgcC28HGTJXounufZDwplZ6Kc09fH5oIT2iUf8-LfT2dFDhJGzui8QG5p5Y2U0vmU-jp0kceiNqp4kqtKiefzBbWVW4TTfLogy0LJfG28SDHqd5gmwMiOCtwS-lQSmb-s2tdkxZTQZZDNBWEVv9kEsXEIUc_gmnm8I7Zm0vPEXeP7XhjqcQrA17y8b5ATJTAjJg0hS3DnRZ7uPhJvDtUC39Frz0ah';
+  static const String profileImage =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBDHVrR_G42Bxao0ApmV2xxyCt7HY85gELN2-UqtPYFAE58-WgV4Qv59izFaoUpH6VVsnDR-syKtKzp3mgPisynDkoE2xg4sNSc4F4DIfUrvrG12yjxecgmcRk1yy5dg8mwRA1MgjaXfGvUjnP1JlBUO_FpJOY15FzDsNXvCKw0kq9583Lkz98I8LLfQI_tmGxxJjCGn6zj0-pfjLFR4u1sYCqdZ4ajVa1gi-JVC95OFaHO2XR5244lOKBTqoeVXICSYe5wNMWaXG83';
+  static const String heroImageDetails =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBxxsEjh5D9g-mb6HSOM_x7BSVM3f3tFrKbdeO1ENA2v3sECkvVXRU9lEpcCpFS87Un5VbUoBTFQVI_jJAGfTmkv2ybSi5bGyXZAp_1jY1DuKayt4rOE0UlB2-Ejk-g5vnofXFLYddNfEbIhM6Eq3ivty47GC4oyoG9yFDRlAZi2nD3HpXE15hR_vaSXXw-7oQT4Ur8cLx4i6aYdYWDvlqZ0JejYFIQU8a54j-WbCqVM-qTQXxs32cLbjjOEwOtj8yz3mWSJAAI2nM4';
+}
