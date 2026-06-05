@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import '../constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../constants/colors.dart';
+import '../utils/responsive_size.dart';
 
 class BenefitCard extends StatelessWidget {
   final IconData icon;
@@ -19,13 +21,13 @@ class BenefitCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      height: isLarge ? 120.h(context) : 80.h(context),
+      width: double.infinity,
+      padding: EdgeInsets.all(20.w(context)),
       decoration: BoxDecoration(
         color: AppColors.glassBorderLight,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: AppColors.glassBorderLight,
-        ),
+        borderRadius: BorderRadius.circular(16.w(context)),
+        border: Border.all(color: AppColors.glassBorderLight),
       ),
       child: isLarge
           ? Stack(
@@ -33,26 +35,22 @@ class BenefitCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(
-                      icon,
-                      color: AppColors.primary,
-                      size: 24,
-                    ),
-                    const SizedBox(height: 8),
+                    Icon(icon, color: AppColors.primary, size: 24.sp(context)),
+                    SizedBox(height: 8.h(context)),
                     Text(
                       title,
                       style: GoogleFonts.inter(
-                        fontSize: 14,
+                        fontSize: 14.sp(context),
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
                       ),
                     ),
                     if (subtitle != null) ...[
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4.h(context)),
                       Text(
                         subtitle!,
                         style: GoogleFonts.inter(
-                          fontSize: 12,
+                          fontSize: 12.sp(context),
                           color: AppColors.textGrey,
                         ),
                       ),
@@ -60,11 +58,11 @@ class BenefitCard extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  right: -16,
-                  bottom: -16,
+                  right: -16.w(context),
+                  bottom: -16.w(context),
                   child: Icon(
                     icon,
-                    size: 120,
+                    size: 120.sp(context),
                     color: Colors.white.withOpacity(0.05),
                   ),
                 ),
@@ -74,15 +72,11 @@ class BenefitCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  icon,
-                  color: AppColors.primary,
-                  size: 24,
-                ),
+                Icon(icon, color: AppColors.primary, size: 24.sp(context)),
                 Text(
                   title,
                   style: GoogleFonts.inter(
-                    fontSize: 14,
+                    fontSize: 14.sp(context),
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
                     height: 1.2,

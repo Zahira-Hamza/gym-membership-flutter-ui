@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../utils/responsive_size.dart';
 
 class FeatureListItem extends StatelessWidget {
   final IconData icon;
@@ -17,11 +18,11 @@ class FeatureListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.only(bottom: 16),
+      padding: EdgeInsets.all(16.w(context)),
+      margin: EdgeInsets.only(bottom: 16.h(context)),
       decoration: BoxDecoration(
         color: AppColors.glassBorderLight, // roughly rgba(255,255,255,0.05) or similar
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.w(context)),
         border: Border.all(
           color: AppColors.glassBorderLight,
         ),
@@ -29,19 +30,19 @@ class FeatureListItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 48,
-            height: 48,
+            width: 48.w(context),
+            height: 48.w(context), // maintain aspect ratio
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerHighest,
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.w(context)),
             ),
             child: Icon(
               icon,
               color: AppColors.primary,
-              size: 24,
+              size: 24.sp(context),
             ),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16.w(context)),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,16 +50,16 @@ class FeatureListItem extends StatelessWidget {
                 Text(
                   title,
                   style: GoogleFonts.inter(
-                    fontSize: 14,
+                    fontSize: 14.sp(context),
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4.h(context)),
                 Text(
                   subtitle,
                   style: GoogleFonts.inter(
-                    fontSize: 14,
+                    fontSize: 14.sp(context),
                     color: AppColors.textGrey,
                   ),
                 ),

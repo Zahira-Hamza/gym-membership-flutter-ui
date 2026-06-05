@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../utils/responsive_size.dart';
 
 class FaqItem extends StatefulWidget {
   final String question;
@@ -22,10 +23,10 @@ class _FaqItemState extends State<FaqItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 8),
+      margin: EdgeInsets.only(bottom: 8.h(context)),
       decoration: BoxDecoration(
         color: AppColors.glassBorderLight,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.w(context)),
         border: Border.all(
           color: AppColors.glassBorderLight,
         ),
@@ -33,10 +34,11 @@ class _FaqItemState extends State<FaqItem> {
       child: Theme(
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
+          tilePadding: EdgeInsets.symmetric(horizontal: 16.w(context)),
           title: Text(
             widget.question,
             style: GoogleFonts.inter(
-              fontSize: 14,
+              fontSize: 14.sp(context),
               fontWeight: FontWeight.w600,
               color: Colors.white,
             ),
@@ -44,6 +46,7 @@ class _FaqItemState extends State<FaqItem> {
           trailing: Icon(
             _isExpanded ? Icons.expand_less : Icons.expand_more,
             color: AppColors.primary,
+            size: 24.sp(context),
           ),
           onExpansionChanged: (expanded) {
             setState(() {
@@ -59,11 +62,11 @@ class _FaqItemState extends State<FaqItem> {
                   ),
                 ),
               ),
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.w(context)),
               child: Text(
                 widget.answer,
                 style: GoogleFonts.inter(
-                  fontSize: 14,
+                  fontSize: 14.sp(context),
                   color: AppColors.textGrey,
                 ),
               ),
